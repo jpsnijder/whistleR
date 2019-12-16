@@ -1,3 +1,5 @@
+Welcome to whistleR, a collection of data-cleaning functions. #CleanAsAWhistle
+
 Each function requires the following parameters:
 
 data = target dataframe,
@@ -22,3 +24,5 @@ RT.win(data = dataframeName,
 Functions: RT.win(), RT.cut(), ACC.win(), ACC.cut()
 
 Any questions? e-mail: jean-paul.snijder@cgu.edu
+
+
