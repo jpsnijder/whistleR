@@ -1,0 +1,3 @@
+data (target dataframe),
+subjVar (subject/ID variable),
+vars (manipulated variables (e.g., congruent vs. incongruent)),
