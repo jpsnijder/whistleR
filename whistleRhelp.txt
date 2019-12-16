@@ -1,3 +1,22 @@
-data (target dataframe),
-subjVar (subject/ID variable),
-vars (manipulated variables (e.g., congruent vs. incongruent)),
+Each function requires the following parameters:
+
+data = target dataframe,
+subjVar =  subject/ID variable,
+vars = manipulated variables (e.g., congruent vs. incongruent),
+value = name of value column (e.g., RT),
+new_df = name for cleaned dataframe,
+st.d. = number of standard deviations (e.g., 2.5),
+minRT  = IF RT; lower bound cutoff point,
+minACC = IF Acc/Error; lower bound cutoff of accuracy. 
+
+Example (copy-able): 
+
+RT.win(data = dataframeName,
+       subjVar = "ID",
+       vars = c("phase", "session", "trialType"),
+       value = "RT",
+       new_df = "winsorizedDF",
+       st.d = 3,
+       minRT = 250)
+
+Any questions? e-mail: jean-paul.snijder@cgu.edu
