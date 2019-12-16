@@ -4,24 +4,25 @@ Each function requires the following parameters:
 
 data = target dataframe,
 subjVar =  subject/ID variable,
-vars = list of manipulated variables (e.g., congruent vs. incongruent). If only at the subject level = leave blank,
+vars = list of manipulated variables at which the data should be split for cleaning. If only at the subject level = leave blank,
 value = name of value column (e.g., RT),
 new_df = name for cleaned dataframe,
 st.d. = number of standard deviations (e.g., 2.5),
 minRT  = IF RT; lower bound cutoff point,
 minACC = IF Acc/Error; lower bound cutoff of accuracy. 
 
-Example (copy-able): 
+Example of function call (copy-able): 
 
 RT.win(data = dataframeName,
        subjVar = "ID",
-       vars = c("phase", "session", "trialType"),
+       vars = c("condition_1", "condition_2", "condition_n"),
        value = "RT",
        new_df = "winsorizedDF",
        st.d = 3,
        minRT = 250)
       
-Functions: RT.win(), RT.cut(), ACC.win(), ACC.cut()
+Cleaning Functions: RT.win(), RT.cut(), ACC.win(), ACC.cut()
+Help Function: whistleR.help()
 
 Any questions? e-mail: jean-paul.snijder@cgu.edu
 
