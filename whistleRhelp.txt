@@ -2,7 +2,7 @@ Each function requires the following parameters:
 
 data = target dataframe,
 subjVar =  subject/ID variable,
-vars = manipulated variables (e.g., congruent vs. incongruent),
+vars = list of manipulated variables (e.g., congruent vs. incongruent). If only at the subject level = leave blank,
 value = name of value column (e.g., RT),
 new_df = name for cleaned dataframe,
 st.d. = number of standard deviations (e.g., 2.5),
@@ -18,5 +18,7 @@ RT.win(data = dataframeName,
        new_df = "winsorizedDF",
        st.d = 3,
        minRT = 250)
+      
+Functions: RT.win(), RT.cut(), ACC.win(), ACC.cut()
 
 Any questions? e-mail: jean-paul.snijder@cgu.edu
