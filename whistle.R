@@ -6,7 +6,10 @@
 ## - added a help function
 
 # Depedencies
-if (!require("plyr")) install.packages("plyr")
+if(!require(plyr)){
+  install.packages("plyr")
+  library(plyr)
+}
 
 
 #################################################
