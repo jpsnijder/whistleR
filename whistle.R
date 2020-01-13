@@ -19,7 +19,7 @@ if(!require(plyr)){
 ####
 # Winsorized RT 
 ####
-RT.win <- function(data, subjVar, vars, value, new_df = winsorized, st.d = 3, minRT = 250){
+RT.win <- function(data, subjVar = "", vars = "", value, new_df = winsorized, st.d = 3, minRT = 250){
   print("Reminder:")
   print("For RT data, only include correct trials!")
   
