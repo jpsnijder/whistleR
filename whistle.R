@@ -86,7 +86,7 @@ RT.cut <- function(data, subjVar, vars, value, new_df = cut, st.d = 3, minRT = 2
 
 ### ACC winsorize ###
 
-ACC.win <- function(data, subjVar, vars, value, new_df = cleanedACC, minACC = .2,){
+ACC.win <- function(data, subjVar, vars, value, new_df = cleanedACC, minACC = .2){
 
   temp <- ddply(data, c(subjVar, vars), function(x){
 
