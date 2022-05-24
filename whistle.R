@@ -19,7 +19,7 @@ if(!require(plyr)){
 ####
 # Winsorized RT 
 ####
-RT.win <- function(data, subjVar = "", vars = "", value, new_df = winsorized, st.d = 3, minRT = 250){
+RT.win <- function(data, subjVar = "", vars = "", value, new_df = winsorized, st.d = 3, minRT = 200){
   print("Reminder:")
   print("For RT data, only include correct trials!")
   
@@ -49,7 +49,7 @@ RT.win <- function(data, subjVar = "", vars = "", value, new_df = winsorized, st
 ####
 # RT Standard Cutoff 
 ####
-RT.cut <- function(data, subjVar, vars, value, new_df = cut, st.d = 3, minRT = 250){
+RT.cut <- function(data, subjVar, vars, value, new_df = cut, st.d = 3, minRT = 200){
   print("Reminder:")
   print("For RT data, only include correct trials!")
   
@@ -59,6 +59,7 @@ RT.cut <- function(data, subjVar, vars, value, new_df = cut, st.d = 3, minRT = 2
     cMax <- ifelse(is.na(cMax), x[[value]], cMax)
     
     x <- x[which(x[[value]] <= cMax),]
+    x <- x[which(x[[value]] >= minRT),]
     
     
     
